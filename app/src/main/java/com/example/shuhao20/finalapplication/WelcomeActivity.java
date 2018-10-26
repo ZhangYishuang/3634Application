@@ -31,7 +31,7 @@ public class WelcomeActivity extends Activity {
         TimerTask delayTask = new TimerTask() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(WelcomeActivity.this,MainActivity.class);
+                Intent mainIntent = new Intent(WelcomeActivity.this,FirstActivity.class);
                 startActivity(mainIntent);
                 WelcomeActivity.this.finish();
             }
