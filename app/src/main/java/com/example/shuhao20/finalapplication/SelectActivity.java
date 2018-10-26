@@ -1,61 +1,53 @@
 package com.example.shuhao20.finalapplication;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Rect;
-import android.media.Image;
 import android.os.Build;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.shuhao20.finalapplication.Adapter.StaggeredGridAdapter;
 
-public class FirstActivity extends AppCompatActivity {
+public class SelectActivity extends AppCompatActivity {
     private ImageView mIv;
     private RecyclerView mRv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_select);
 
-        mRv = findViewById(R.id.rv);
         mIv = findViewById(R.id.iv);
+        mRv = findViewById(R.id.rv);
+
         mIv.setImageResource(R.mipmap.smalltoplogo);
 
-        mRv.setLayoutManager(new GridLayoutManager(FirstActivity.this, 2));
-        mRv.addItemDecoration(new MyDecoration());
-        mRv.setAdapter(new StaggeredGridAdapter(FirstActivity.this, new StaggeredGridAdapter.OnItemClickListener() {
+
+
+        //Material Design
+        mRv.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
+        mRv.addItemDecoration(new SelectActivity.MyDecoration());
+        mRv.setAdapter(new StaggeredGridAdapter(SelectActivity.this, new StaggeredGridAdapter.OnItemClickListener() {
             @Override
             public void onClick(int pos) {
-                if (pos == 0) {
-                    Intent intent = new Intent(FirstActivity.this, MainActivity.class);
-                    startActivity(intent);
-                } else if (pos == 1) {
-                    Intent intent = new Intent(FirstActivity.this, YoutubeActivity.class);
-                    startActivity(intent);
-                } else if (pos == 2) {
-                    Intent intent = new Intent(FirstActivity.this, SelectActivity.class);
-                    startActivity(intent);
-                } else if (pos == 3) {
-                    Intent intent = new Intent(FirstActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(SelectActivity.this, QuizActivity.class);
+                intent.putExtra("pos", pos);
+                intent.putExtra("quizNum",0);
+                startActivity(intent);
             }
-        }, 0));
+        }, 2));
 
-        setFullScreenWithStatusBar(FirstActivity.this);
+
+        setFullScreenWithStatusBar(this);
+
     }
 
     class MyDecoration extends RecyclerView.ItemDecoration{
@@ -67,7 +59,6 @@ public class FirstActivity extends AppCompatActivity {
             outRect.set(gap, gap, gap, gap);
         }
     }
-
     //Up layout and get status bar transparent
     public static void setFullScreenWithStatusBar(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -79,8 +70,4 @@ public class FirstActivity extends AppCompatActivity {
             rootView.setClipToPadding(true);
         }
     }
-
-
-
-
 }
