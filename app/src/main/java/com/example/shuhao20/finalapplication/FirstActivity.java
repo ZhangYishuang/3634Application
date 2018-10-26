@@ -49,7 +49,7 @@ public class FirstActivity extends AppCompatActivity {
                     Intent intent = new Intent(FirstActivity.this, SelectActivity.class);
                     startActivity(intent);
                 } else if (pos == 3) {
-                    Intent intent = new Intent(FirstActivity.this, MainActivity.class);
+                    Intent intent = new Intent(FirstActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
             }
