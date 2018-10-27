@@ -43,7 +43,7 @@ public class FirstActivity extends AppCompatActivity {
                     Intent intent = new Intent(FirstActivity.this, MainActivity.class);
                     startActivity(intent);
                 } else if (pos == 1) {
-                    Intent intent = new Intent(FirstActivity.this, YoutubeActivity.class);
+                    Intent intent = new Intent(FirstActivity.this, YoutubeList.class);
                     startActivity(intent);
                 } else if (pos == 2) {
                     Intent intent = new Intent(FirstActivity.this, SelectActivity.class);
