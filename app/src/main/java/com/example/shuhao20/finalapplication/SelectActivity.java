@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import com.example.shuhao20.finalapplication.Adapter.StaggeredGridAdapter;
 
 public class SelectActivity extends AppCompatActivity {
-    private ImageView mIv;
+    //private ImageView mIv;
     private RecyclerView mRv;
 
     @Override
@@ -25,10 +25,10 @@ public class SelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        mIv = findViewById(R.id.iv);
+        //mIv = findViewById(R.id.iv);
         mRv = findViewById(R.id.rv);
 
-        mIv.setImageResource(R.mipmap.smalltoplogo);
+        //mIv.setImageResource(R.mipmap.smalltoplogo);
 
 
 

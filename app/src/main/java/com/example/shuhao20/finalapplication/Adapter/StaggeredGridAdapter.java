@@ -132,97 +132,97 @@ public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdap
                 holder.imageView.setImageResource(R.mipmap.aa);
                 holder.mTv_Chapter.setText("Chapter 1");
                 holder.mTv_Chapter_Name.setText("Java Overview");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 1) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.secondimage);
                 holder.mTv_Chapter.setText("Chapter 2");
                 holder.mTv_Chapter_Name.setText("Setting Java Environment");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 2) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.third);
                 holder.mTv_Chapter.setText("Chapter 3");
                 holder.mTv_Chapter_Name.setText("Basic Java Syntax");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 3) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.dd);
                 holder.mTv_Chapter.setText("Chapter 4");
                 holder.mTv_Chapter_Name.setText("Variable & Data Type");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 4) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.ee);
                 holder.mTv_Chapter.setText("Chapter 5");
                 holder.mTv_Chapter_Name.setText("Arrays");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 5) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.ff);
                 holder.mTv_Chapter.setText("Chapter 6");
                 holder.mTv_Chapter_Name.setText("Control Statements");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 6) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.seventh);
                 holder.mTv_Chapter.setText("Chapter 7");
                 holder.mTv_Chapter_Name.setText("Methods");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 7) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.eighth);
                 holder.mTv_Chapter.setText("Chapter 8");
                 holder.mTv_Chapter_Name.setText("Strings");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 8) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.javaoop);
                 holder.mTv_Chapter.setText("Chapter 9");
                 holder.mTv_Chapter_Name.setText("Java OOP");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 9) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.cc);
                 holder.mTv_Chapter.setText("Chapter 10");
                 holder.mTv_Chapter_Name.setText("Constructors");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 10) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.eleventh);
                 holder.mTv_Chapter.setText("Chapter 11");
                 holder.mTv_Chapter_Name.setText("4 pillars");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 11) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.twelveth);
                 holder.mTv_Chapter.setText("Chapter 12");
                 holder.mTv_Chapter_Name.setText("Abstraction");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 12) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.jj);
                 holder.mTv_Chapter.setText("Chapter 13");
                 holder.mTv_Chapter_Name.setText("Encapsulation");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 13) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.fourteenth);
                 holder.mTv_Chapter.setText("Chapter 14");
                 holder.mTv_Chapter_Name.setText("Inheritance");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 14) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.ll);
                 holder.mTv_Chapter.setText("Chapter 15");
                 holder.mTv_Chapter_Name.setText("Polymorphism");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             } else if (position == 15) {
                 //holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 holder.imageView.setImageResource(R.mipmap.mm);
                 holder.mTv_Chapter.setText("Chapter 16");
                 holder.mTv_Chapter_Name.setText("Java Exception Handling");
-                holder.mTv_Chapter_Name.setTextSize(0);
+                //holder.mTv_Chapter_Name.setTextSize(0);
             }
         }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
