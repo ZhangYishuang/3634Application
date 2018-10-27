@@ -859,7 +859,7 @@ public class QuizActivity extends AppCompatActivity {
                             right_wrong = true;
                         } else {
                             mIv.setImageResource(R.mipmap.wrong);
-                            mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                            mTv_ex.setText("The correct answer is: " + mRb_1.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                             right_wrong = false;
                         }
                     } else if (rint == 1) {
@@ -869,6 +869,7 @@ public class QuizActivity extends AppCompatActivity {
                         } else {
                             mIv.setImageResource(R.mipmap.wrong);
                             mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                            mTv_ex.setText("The correct answer is: " + mRb_2.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                             right_wrong = false;
                         }
                     } else if (rint == 2) {
@@ -878,6 +879,7 @@ public class QuizActivity extends AppCompatActivity {
                         } else {
                             mIv.setImageResource(R.mipmap.wrong);
                             mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                            mTv_ex.setText("The correct answer is: " + mRb_3.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                             right_wrong = false;
                         }
                     } else if (rint == 3) {
@@ -887,6 +889,7 @@ public class QuizActivity extends AppCompatActivity {
                         } else {
                             mIv.setImageResource(R.mipmap.wrong);
                             mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                            mTv_ex.setText("The correct answer is: " + mRb_4.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                             right_wrong = false;
                         }
                     }
@@ -919,6 +922,7 @@ public class QuizActivity extends AppCompatActivity {
                          } else {
                              mIv.setImageResource(R.mipmap.wrong);
                              mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                             mTv_ex.setText("The correct answer is: " + mRb_1.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                              right_wrong = false;
                          }
                      } else if (rint == 1) {
@@ -928,6 +932,7 @@ public class QuizActivity extends AppCompatActivity {
                          } else {
                              mIv.setImageResource(R.mipmap.wrong);
                              mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                             mTv_ex.setText("The correct answer is: " + mRb_2.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                              right_wrong = false;
                          }
                      } else if (rint == 2) {
@@ -937,6 +942,7 @@ public class QuizActivity extends AppCompatActivity {
                          } else {
                              mIv.setImageResource(R.mipmap.wrong);
                              mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                             mTv_ex.setText("The correct answer is: " + mRb_3.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                              right_wrong = false;
                          }
                      } else if (rint == 3) {
@@ -946,6 +952,7 @@ public class QuizActivity extends AppCompatActivity {
                          } else {
                              mIv.setImageResource(R.mipmap.wrong);
                              mTv_ex.setText(quizzes.get(quizNum).getExplanation());
+                             mTv_ex.setText("The correct answer is: " + mRb_4.getText().toString() + "\n\n" + quizzes.get(quizNum).getExplanation());
                              right_wrong = false;
                          }
                      }

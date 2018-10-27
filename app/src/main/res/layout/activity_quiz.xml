@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="60dp"
-        android:paddingRight="40dp"
+        android:paddingRight="20dp"
         >
         <Button
             android:id="@+id/btn"
