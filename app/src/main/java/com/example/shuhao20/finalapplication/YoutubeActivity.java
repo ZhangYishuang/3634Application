@@ -1,73 +1,115 @@
 package com.example.shuhao20.finalapplication;
 
-import android.app.Activity;
-import android.graphics.Bitmap;
-import android.os.Build;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
+import com.example.shuhao20.finalapplication.Adapter.VideoAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Vector;
 
-public class YoutubeActivity extends YouTubeBaseActivity {
-    private YouTubePlayerView mYv;
-    private Button mBtn;
-    private YouTubePlayer.OnInitializedListener mOnInitializedListner;
-    private ImageView mIv;
+//public class YoutubeActivity extends YouTubeBaseActivity {
+//    private YouTubePlayerView mYv;
+//    private Button mBtn;
+//    private YouTubePlayer.OnInitializedListener mOnInitializedListner;
+//    private ImageView mIv;
+//
+//    private static final String TAG = "MainActivity";
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_youtube);
+//
+//        Log.d(TAG, "onCreate: Starting");
+//
+//        mYv = findViewById(R.id.yv);
+//        mBtn = findViewById(R.id.btn);
+////        mIv = findViewById(R.id.iv);
+////
+////        mIv.setImageResource(R.mipmap.smalltoplogo);
+//
+//        mOnInitializedListner = new YouTubePlayer.OnInitializedListener() {
+//            @Override
+//            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+//                Log.d(TAG, "onClick: Initializing YouTUBE Player.");
+//                youTubePlayer.loadVideo("8w2Fm3I7JUg");
+//            }
+//
+//            @Override
+//            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+//                Log.d(TAG, "onClick: Failed to initialize");
+//            }
+//        };
+//
+//        mBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Log.d(TAG, "onClick: Initializing YouTUBE Player.");
+//                mYv.initialize(YoutubeConfig.getApiKey(), mOnInitializedListner);
+//            }
+//        });
+//
+//
+//
+//    }
+//}
 
-    private static final String TAG = "MainActivity";
+
+public class YoutubeActivity extends AppCompatActivity {
+
+    //recycler view field
+    RecyclerView recyclerView;
+
+    //vector for video urls
+    Vector<YoutubeVideo> youtubeVideos = new Vector<YoutubeVideo>();
+
+    VideoAdapter videoAdapter;
+//            ProductAdapter adapter;
+//            List<Text> productList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        Log.d(TAG, "onCreate: Starting");
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        mYv = findViewById(R.id.yv);
-        mBtn = findViewById(R.id.btn);
-//        mIv = findViewById(R.id.iv);
-//
-//        mIv.setImageResource(R.mipmap.smalltoplogo);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mOnInitializedListner = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                Log.d(TAG, "onClick: Initializing YouTUBE Player.");
-                youTubePlayer.loadVideo("8w2Fm3I7JUg");
-            }
+        //load video list
+        //    textContent();
+        videoContent();
 
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-                Log.d(TAG, "onClick: Failed to initialize");
-            }
-        };
+        // adapter = new ProductAdapter(this,productList);
 
-        mBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "onClick: Initializing YouTUBE Player.");
-                mYv.initialize(YoutubeConfig.getApiKey(), mOnInitializedListner);
-            }
-        });
+        videoAdapter = new VideoAdapter(youtubeVideos);
 
 
+        recyclerView.setAdapter(videoAdapter);
+        // recyclerView.setAdapter(adapter);
+    }
 
+    private void videoContent() {
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/NcmDpIFVJN4\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/bxIZ1GVWYkQ\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/hF8F3wm9DUc\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/RnD6NJs5xoI\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/eNPX2pTiaHI\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/-oi9Pg0128M\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/-IJ5izjbWIA\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/RxeDe6BsTMI\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/jM8gOF6Oi-U\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+        youtubeVideos.add(new YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/zZq_XDhU-rc\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+
+
+    }
+
+    private void textContent() {
     }
 }
