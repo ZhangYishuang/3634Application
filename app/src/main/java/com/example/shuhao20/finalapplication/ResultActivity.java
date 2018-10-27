@@ -21,7 +21,6 @@ public class ResultActivity extends AppCompatActivity {
         mResult = findViewById(R.id.result);
         mComment = findViewById(R.id.comment);
         mBtn = findViewById(R.id.btn);
-        right = 3;
 
 
         Intent intent = getIntent();

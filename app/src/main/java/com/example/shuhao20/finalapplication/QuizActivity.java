@@ -843,12 +843,13 @@ public class QuizActivity extends AppCompatActivity {
                             Intent intent = new Intent(QuizActivity.this, QuizActivity.class);
                             intent.putExtra("quizNum", quizNum + 1);
                             intent.putExtra("pos", position);
-                            intent.putExtra("rihgt", right + 1);
                             if (right_wrong == true) {
-                                intent.putExtra("rihgt", right + 1);
+                                right = right + 1;
+                                intent.putExtra("right", right);
                             } else {
-                                intent.putExtra("rihgt", right);
+                                intent.putExtra("right", right);
                             }
+                            System.out.println(right + "look at here");
                             startActivity(intent);
                         }
                     });
@@ -901,10 +902,12 @@ public class QuizActivity extends AppCompatActivity {
                          public void onClick(View view) {
                              Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                              if (right_wrong == true) {
-                                 intent.putExtra("rihgt", 5);
+                                 right = right + 1;
+                                 intent.putExtra("right", right);
                              } else {
-                                 intent.putExtra("rihgt", 3);
+                                 intent.putExtra("right", right);
                              }
+
 
                              startActivity(intent);
                          }
